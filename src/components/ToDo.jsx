@@ -1,15 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import '../App.css';
+import Button from '../elements/button.jsx';
+import Input from "./input.jsx";
+import TaskList from "./taskList.jsx";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-const Button = ({ addTask }) => {
-    return (
-        <button className="button" onClick={addTask}>
-            Add
-        </button>
-    );
-};
 
 function ToDo() {
     const [task, setTask] = useState('');
@@ -24,8 +20,8 @@ function ToDo() {
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }, [tasks]);
 
-    const handleChange = (Event) => {
-        setTask(Event.target.value);
+    const handleChange = (event) => {
+        setTask(event.target.value);
     };
 
     const addTask = () => {
@@ -53,36 +49,19 @@ function ToDo() {
     return (
         <div className="App">
             <div className="input-container">
-                <input
-                    value={task}
-                    onChange={handleChange}
+                <Input 
+                    inputValue={task}
+                    handleChange={handleChange}
                     placeholder="Add a task"
-                    className="input-field"
-                />
-                <Button addTask={addTask} />
+                    styleclass="input-field"/>
+                
+                <Button type="button" onClick={addTask} text = "Add" />
             </div>
-            <ul className="task-list">
-                {tasks.map((task, index) => (
-                    <li
-                        key={index}
-                        className={`task-item ${task.completed ? 'completed' : ''}`}
-                    >
-                        <input
-                            type="checkbox"
-                            checked={task.completed}
-                            onChange={() => toggleComplete(index)}
-                            className="task-checkbox"
-                        />
-                        <span className="task-text">{task.text}</span>
-                        <button
-                            onClick={() => deleteTask(index)}
-                            className="delete-button"
-                        >
-                            <i className="fas fa-times"></i>
-                        </button>
-                    </li>
-                ))}
-            </ul>
+
+            <TaskList
+            tasks = {tasks}
+            toggleComplete = {toggleComplete}
+            deleteTask = {deleteTask} />
         </div>
     );
 }
