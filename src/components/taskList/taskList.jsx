@@ -1,6 +1,7 @@
 import React from "react";
-import './components.css';
-import Button from "../elements/button";
+import Button from "../../elements/button/index.jsx";
+import './taskList.css';
+
 
 const TaskList = ({tasks, toggleComplete, deleteTask}) => {
     return (

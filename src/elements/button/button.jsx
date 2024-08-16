@@ -1,5 +1,5 @@
 import React from 'react';
-import './button.css'
+import './button.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Button = ({type, onClick, text, icon }) => {
