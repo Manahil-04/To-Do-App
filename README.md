@@ -44,4 +44,4 @@ This is a simple React-based To-Do List application that allows users to add, co
     ```bash
     npm run dev
     ```
-    The application will be accessible at http://localhost:5173 in your web browser. Note that the port number might vary if another service is already using port 3000. In such cases, the development server will suggest an available port, and you'll be able to access the application there (e.g., http://localhost:5174).
+    The application will be accessible at http://localhost:5173 in your web browser. Note that the port number might vary if another service is already using port 5173. In such cases, the development server will suggest an available port, and you'll be able to access the application there (e.g., http://localhost:5174).
