@@ -1,11 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
+
 import Button from "../elements/button/index.jsx";
 import Input from "./input/index.jsx";
 import TaskList from "./taskList/index.jsx";
-import '../App.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 
+import '../App.css';
 
 function ToDo() {
     const [task, setTask] = useState('');
