@@ -20,7 +20,7 @@ function ToDo() {
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }, [tasks]);
 
-    const handleChange = (event) => {
+    const handleInputChange = (event) => {
         setTask(event.target.value);
     };
 
@@ -51,7 +51,7 @@ function ToDo() {
             <div className="input-container">
                 <Input 
                     inputValue={task}
-                    handleChange={handleChange}
+                    handleInputChange={handleInputChange}
                     placeholder="Add a task"
                     styleclass="input-field"/>
                 
