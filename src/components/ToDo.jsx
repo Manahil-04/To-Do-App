@@ -12,8 +12,7 @@ function ToDo() {
     const [tasks, setTasks] = useState([]);
 
     useEffect(() => {
-        const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
-        setTasks(storedTasks);
+        setTasks(JSON.parse(localStorage.getItem('tasks')) || []);
     }, []);
 
     useEffect(() => {
