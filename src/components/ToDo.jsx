@@ -52,7 +52,7 @@ function ToDo() {
                     inputValue={task}
                     handleInputChange={handleInputChange}
                     placeholder="Add a task"
-                    styleclass="input-field"/>
+                    className="input-field"/>
                 
                 <Button type="button" onClick={addTask} text = "Add" />
             </div>
