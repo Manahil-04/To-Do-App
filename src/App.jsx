@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
-import './App.css'
+
 import ToDo from './components/ToDo'
+
+import './App.css'
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function App() {    
   return (
